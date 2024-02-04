@@ -21,10 +21,10 @@
 }
 .item-grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(40%, auto));
-  grid-template-rows: repeat(auto-fit, minmax(40%, auto));
+  grid-template-columns: repeat(auto-fit, minmax(20%, 22%));
+  grid-template-rows: repeat(auto-fit, minmax(50%, auto));
   padding: 10px;
-  row-gap: 40px;
+  row-gap: 10px;
   column-gap: 40px;
 }
 .item-wrapper {
