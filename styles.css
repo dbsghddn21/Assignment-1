@@ -19,3 +19,22 @@
     font-size: 20px;
     margin-right: 15px;
 }
+.item-grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20%, 22%));
+  grid-template-rows: repeat(auto-fit, minmax(50%, auto));
+  padding: 10px;
+  row-gap: 10px;
+  column-gap: 40px;
+}
+.item-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid #ccc;
+    background-color: #eee;
+    border-radius: 5px;
+    padding: 16px;
+    margin: 16px 0;
+
+}
