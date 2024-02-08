@@ -85,3 +85,23 @@ footer p{
     margin: 0px;
     color: #fff;
 }
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    background-color: #ddd;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+.contact-method {
+    background-color: #ddd; /* medium gray background */
+    padding: 0px;
+    margin: 10px;
+    border-radius: 10px; /* rounded corners */
+}
+.contact-method a:hover {
+    color: #007BFF;
+}
