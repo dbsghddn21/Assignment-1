@@ -169,7 +169,7 @@ footer p{
     width: 100%;
 }
 
-.login button[type=submit]{
+.login button[type=button]{
     color: #fff;
     border-color: #4CAF50;
     background-color: #4CAF50;
@@ -179,11 +179,19 @@ footer p{
     opacity: 0.5;
 }
 
-.login button[type=submit]:hover{
+.login button[type=button]:hover{
     background-color: #45a049;
     opacity: 1.0;
 }
 
 .register a:hover{
     color: #007BFF;
+}
+
+.messageBox{
+    display: flex;
+    border: 2px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin: 20px;
 }
