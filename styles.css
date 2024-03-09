@@ -195,3 +195,52 @@ footer p{
     padding: 10px;
     margin: 20px;
 }
+
+.sign-up{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ddd;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.sign-up .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.sign-up label{
+    display: block;
+    margin: 10px;
+}
+
+.sign-up input{
+    margin: 10px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.sign-up button{
+    background-color: #4CAF50;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+    opacity: 0.5;
+}
+
+.sign-up button:hover{
+    background-color: #45a049;
+    opacity: 1.0;
+}
+
+.messageBox {
+    border: 2px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin: 20px;
+}

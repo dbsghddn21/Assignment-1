@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign up</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <script>
+        function showMessage(message) {
+            let messageBox = document.querySelector('.messageBox');
+            let messageText = document.querySelector('#messageText');
+            messageText.textContent = message;
+            messageBox.style.display = 'block';
+        }
+
+        async function isValidUser() {
+            let username = document.querySelector('input[id="username"]').value;
+
+            // Regular expression for username validation
+            let regex = /^[A-Za-z][A-Za-z0-9_-]{2,19}$/;
+
+            if (!regex.test(username)) {
+                showMessage('Invalid username. Username must be 3-20 characters long, start with a letter, and can only include alphanumeric characters, hyphens, and underscores.');
+                return false;
+            }
+        }
+
+        async function isValidPassword() {
+            let password = document.querySelector('input[id="password"]').value;
+            let confirmPassword = document.querySelector('input[id="confirmPassword"]').value;
+
+            // Regular expression for password validation
+            let regex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d!@#$%^&*()\-_=+[\]{}|;:'",.<>?\/`~.']{8,}$/;
+
+            if (!regex.test(password)) {
+                showMessage('Invalid password. Password must be at least 8 characters long and include at least one letter and one number. Password cannot contain spaces.');
+                return false;
+            }
+            if (password.contail(" ")) {
+                showMessage('Invalid password. Password cannot contain spaces.');
+                return false;
+            }
+            if (password !== confirmPassword) {
+                showMessage('Passwords do not match.');
+                return false;
+            }
+        }
+
+        async function isVaildEmail(){
+            let email = document.querySelector('input[id="email"]').value;
+
+            // Regular expression for email validation
+            let regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+
+            if (!regex.test(email)) {
+                showMessage('Invalid email. Please enter a valid email address. Connot contain spaces.');
+                return false;
+            }
+        }
+    </script>
+    <header>
+        <div class='header-content'>
+                <img src="images/logo.png" alt="logo" width="221px">
+                <h1>Gund-arm Co</h1>
+        </header>
+
+    <div class="nav">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </div>
+
+    <div class="sign-up">
+        <div class="sign-up-wraper">
+        <div class="content-wrapper">
+            <label for="username"><b>Username:</b></label>
+            <input type="text" id="username" placeholder="Enter Username" name="username" required>
+            <label for="password"><b>Password:</b></label> 
+            <input type="password" id="password" placeholder="Enter Password" name="password" required>
+            <label for="confirmPassword"><b>Confirm Password:</b></label>
+            <input type="password" id="confirmPassword" placeholder="Confirm Password" name="confirmPassword" required>
+            <div class="email-wrapper">
+            <label for="email"><b>Email:</b></label>
+            <input type="text" id="email" placeholder="Enter Email" name="email" required>
+            <button type="button" id="sign-up-button" onclick="isValidUser() && isValidPassword() && isValidEmail()">Sign up</button>        
+        </div>
+        </div>
+    </div>
+    </div>
+    <div class ="messageBox" style="display: none">
+        <p id="messageText"></p>
+    </div>
+    <footer>
+        <p>©2024 Hyunmyung Park and Hongwoo Yoon</p>
+    </footer>
+</body>
+</html>
