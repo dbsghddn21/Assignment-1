@@ -162,10 +162,14 @@
                 item.classList.add('cart-item');
                 item.dataset.name = name;
                 item.innerHTML = `
-                    <p>Name: ${name}</p>
-                    <p>Price: ${price}</p>
-                    <p class="quantity">1</p>
-                    <button class="remove-btn">Remove</button>
+                    <div class="cart-item">
+                        <div class="cart-detail name">${name}</div>
+                        <div class="cart-detail price">${price}</div>
+                        <div class="cart-detail quantity-container">
+                            <p class="quantity">1</p>
+                            <button class="remove-btn">Remove</button>
+                        </div>
+                    </div>
                 `;
                 cart.appendChild(item);
 

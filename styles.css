@@ -74,7 +74,48 @@
 .product button:hover {
     background-color: #45A049;
 }
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0; /* Adds some padding around each cart item */
+}
 
+.cart-detail {
+    display: flex;
+    align-items: center;
+}
+
+.cart-detail.name {
+    flex-grow: 1; /* Allows the name to grow and fill available space */
+}
+
+.cart-detail.price, .cart-detail.quantity-container {
+    /* Ensure these elements do not grow and are aligned */
+    flex-grow: 0;
+    display: flex;
+    align-items: center;
+}
+
+.cart-detail.quantity-container {
+    margin-left: 10px; /* Creates space between price and quantity */
+    padding: 5px;
+    gap: 10px; /* Creates space between quantity and button */
+}
+
+.remove-btn {
+    background-color: #434343;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.remove-btn:hover {
+    background-color: #ff0000;
+}
 .header-content {
     display: flex;
     justify-content: space-between;
