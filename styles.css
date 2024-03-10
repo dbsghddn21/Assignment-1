@@ -20,52 +20,61 @@
     font-size: 20px;
     margin-right: 15px;
 }
-.item-grid-container {
-  display: grid;
-  background-color: #dddddd;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 22%));
-  grid-template-rows: repeat(auto-fit, minmax(50%, auto));
-  padding: 20px;
-  margin: 20px;
-  row-gap: 10px;
-  column-gap: 20px;
-}
-.item-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #f9f9f9;
-    border-radius: 10px;
+.product-list {
+	background-color: #ddd;
+    flex-wrap: wrap;
+    justify-content: space-around;
     padding: 20px;
     margin: 20px;
+    margin: 0 auto;
+    text-align: center;
 }
-.item-wrapper img {
+
+/* Product Styling */
+.product {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    width: 50%; /* Ensure two products per line with spacing */
+    text-align: center;
+}
+/* Product Container Styles */
+.product-container {
+    display: flex;
+    justify-content: space-between;
     width: 100%;
-    height: auto;
+}
+.product img {
+    max-width: 100%;
     border-radius: 8px;
     margin-bottom: 10px;
 }
-.item-wrapper h4 {
-    margin: 10px;
-}
-.item-wrapper h5 {
-    margin: 10px;
-    color: #007bff;
+
+.product .item-price {
+    color: #007BFF;
+    font-weight: bold;
 }
 
-.item-wrapper button {
+/* Hover Effect */
+.product:hover {
+    background-color: #ffffff;
+}
+
+/* Button Styling */
+.product button {
     background-color: #4CAF50;
     color: white;
     padding: 10px;
-    margin: 10px;
+    border: none;
     border-radius: 5px;
-    border: none;}
-
-.item-wrapper button:hover {
-    background-color: #45a049;
-
+    margin: 10px;
 }
+
+.product button:hover {
+    background-color: #45A049;
+}
+
 .header-content {
     display: flex;
     justify-content: space-between;
